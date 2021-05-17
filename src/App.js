@@ -3,9 +3,9 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
+    // Link,
     NavLink,
-    Redirect,
+    // Redirect,
     useRouteMatch,
     useParams,
 } from "react-router-dom";
@@ -17,7 +17,7 @@ export default function App() {
             <ul>
               <li>
                 <NavLink to="/"
-        /* activeClassName="selected" */
+                      /* activeClassName="selected" */
                          activeStyle={{
                              fontWeight: "bold",
                              color: "red"
@@ -58,8 +58,7 @@ export default function App() {
               <Route path="/">
                 <Home />
               </Route>
-              <Route >
-                <Redirect to="/404"/>
+              <Route component={NotFound}>
               </Route>
             </Switch>
           </div>
