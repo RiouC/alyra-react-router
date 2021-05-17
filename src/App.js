@@ -49,17 +49,16 @@ export default function App() {
             </ul>
 
             <Switch>
-              <Route path="/about">
+              <Route exact path="/about">
                 <About />
               </Route>
-              <Route path="/topics">
+              <Route exact path="/topics">
                 <Topics />
               </Route>
-              <Route path="/">
+              <Route exact path="/">
                 <Home />
               </Route>
-              <Route component={NotFound}>
-              </Route>
+              <Route component={NotFound} />
             </Switch>
           </div>
         </Router>
